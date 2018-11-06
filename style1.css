@@ -1,0 +1,131 @@
+.Row {
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+#Row2 {
+    margin-top: 125px;
+}
+
+#Row3 {
+    margin-top: 100px;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    display: table;
+}
+
+#BlueBox {
+    float: left;
+    margin-right: 250px;
+    background-color: royalblue;
+}
+
+#TextA {
+    display: table-cell;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    vertical-align: text-top;
+}
+
+#YellowBox {
+    float: left;
+    margin-right: 150px;
+    background-color: yellow;
+    border: 2px solid black;
+}
+
+#TextB {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#GreenBox {
+    float: left;
+    background-color: forestgreen;
+    border: 2px solid black;
+}
+
+#TextC {
+    display: table-cell;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+#ImageBox {
+    float: right;
+    border: 2px solid black;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes cf3FadeInOut {
+    0% {
+        opacity:0;
+    }
+    25% {
+        opacity:0.25;
+    }
+    50% {
+        opacity:0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+#StaticImagine{
+    animation-name: cf3FadeInOut;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate;
+}
+
+#Boxdrag1 {
+    float: left;
+    margin-right: 250px;
+    border: 2px solid black;
+}
+
+#RedBox {
+    width: 800px;
+    height: 200px;
+    display: table;
+    background-color: hotpink;
+    border: 2px solid red;
+}
+
+#TextD {
+    display: table-cell;
+    font-size: 40px;
+    color: red;
+    text-align: left;
+    vertical-align: text-top;
+}
+
+#Boxdrag2 {
+    float: left;
+    border: 2px solid grey;
+    margin-left: 50px;
+}
+
+#Boxdrag3 {
+    float: right;
+    border: 2px solid black;
+    margin-right: 125px;
+}

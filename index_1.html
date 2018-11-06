@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <title>Part 1</title>
+
+    <script>
+        function allowDrop(ev) {
+        ev.preventDefault();
+        }
+
+        function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+    <div class="Row">
+        <div class="box" id="BlueBox">
+            <div id="TextA">Text A</div>
+        </div>
+
+        <div class="box" id="YellowBox">
+            <div id="TextB">Text B</div>
+        </div>
+
+        <div class="box" id="GreenBox">
+            <div id="TextC">Text C</div>
+        </div>
+
+        <div class="box" id="ImageBox">
+            <img id="StaticImagine" src="./mountain.png">
+        </div>
+    </div>
+
+    <div class="Row" id="Row2">
+        <div class="box" id="Boxdrag1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="DnD1" draggable="true" ondragstart="drag(event)" src="./mountain.png">
+        </div>
+
+        <div id="RedBox">
+            <div id="TextD">Text D</div>
+        </div>
+    </div>
+
+    <div class="Row" id="Row3">
+        <div class="box" id="Boxdrag2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="box" id="Boxdrag3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+</body>
+</html>
